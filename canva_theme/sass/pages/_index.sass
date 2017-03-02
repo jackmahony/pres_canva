@@ -1,0 +1,309 @@
+// /////////////////////////////////////////////////////
+/* GLOBALS
+/////////////////////////////////////////////////////////
+
+body
+  margin: 0
+  padding: 0
+
+.button
+  cursor: pointer
+
+// /////////////////////////////////////////////////////
+/* THIS IS THE TOP SECTION FOR THE WEBPAGE
+/////////////////////////////////////////////////////////
+
+section#hero
+  background-image: url("../../assets/background.jpg")
+  background-size: cover
+  padding-top: 0
+  padding-bottom: 3rem
+  height: 55vh
+
+
+  h1
+    display: block
+
+  p
+    margin-left: 0
+    margin-right: 0
+    color: $white
+    text-align: center
+    padding-left: 2rem
+    padding-right: 2rem
+
+  .hero-container
+    width: 85%
+    padding-top: 3rem
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+    .tagline-container
+      margin-top: 2rem
+      width: 85%
+      display: block
+      margin-left: auto
+      margin-right: auto
+
+    .image-container
+      position: relative
+      width: 80%
+      margin-left: auto
+      margin-right: auto
+      bottom: 0
+
+      img
+        width: 100%
+        height: auto
+        display: block
+        margin-left: auto
+        margin-right: auto
+
+  // Breakpoint for desktop
+  @media screen and (min-width: 640px)
+    background-image: none
+    background-image: url("../../assets/background-2.jpg")
+    padding-top: 5rem
+    padding-bottom: 3rem
+    height: 45vh
+
+    p
+      margin-left: 20%
+      margin-right: 20%
+
+    .hero-container
+
+      .image-container
+        width: 60%
+
+        img
+          width: 100%
+          height: auto
+
+// /////////////////////////////////////////////////////
+/* THIS IS THE FEATURES SECTION */
+/////////////////////////////////////////////////////////
+
+section#features
+  position: relative
+  padding-top: 3rem
+  padding-bottom: 3rem
+  text-align: center
+
+  .features-container
+    position: relative
+    width: 85%
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+    .features-title
+      position: relative
+
+    .features-list, .features-list-2
+      position: relative
+      margin-top: 0
+
+      .feature
+        margin-top: 2rem
+
+        img
+          width: 50px
+          height: auto
+
+  // Breakpoint for desktop
+  @media screen and (min-width: 640px)
+    padding-top: 3.5rem
+    padding-bottom: 3.5rem
+    text-align: center
+
+    .features-container
+      width: 80%
+      overflow: auto
+      position: relative
+
+      .features-title
+        position: relative
+
+      .float-container
+        position: relative
+
+        .features-list
+          width: 45%
+          float: left
+
+        .features-list-2
+          float: right
+          width: 45%
+
+// /////////////////////////////////////////////////////
+/* THIS IS THE FAQ's SECTION */
+/////////////////////////////////////////////////////////
+
+section#faqs
+  position: relative
+  padding-top: 3rem
+  padding-bottom: 3rem
+  background-color: #5271FF
+  clear: both
+
+  h3
+    cursor: pointer
+    display: inline-block
+    border-bottom: 1px solid
+
+  p
+    color: $white
+
+  .faqs-container
+    width: 85%
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+    .faq-single
+      position: relative
+
+      h2
+        color: $white
+        display: block
+
+    #accordion h2
+      color: $white
+      padding-bottom: 2rem
+
+  @media screen and (min-width: 640px)
+    padding-top: 4rem
+    padding-bottom: 4rem
+
+// /////////////////////////////////////////////////////
+/* THIS IS THE PRODUCT SECTION */
+/////////////////////////////////////////////////////////
+
+section#products
+  position: relative
+  padding-top: 3rem
+  padding-bottom: 3rem
+  text-align: center
+
+  .product-container
+    position: relative
+    width: 85%
+    overflow: auto
+    margin-left: auto
+    margin-right: auto
+
+    .column-container
+      margin-top: 2rem
+
+    .column-left, .column-right, .column-center
+      display: block
+
+      .product
+        margin-top: 1rem
+
+        img
+          width: 100%
+          height: auto
+          border-radius: 5px
+
+  // Breakpoint for desktop
+  @media screen and (min-width: 640px)
+
+    .product-container
+      position: relative
+
+      .product-title
+        width: 70%
+        margin-right: auto
+        margin-left: auto
+        display: block
+
+      .column-left
+        float: left
+        width: 33%
+
+      .column-right
+        float: right
+        width: 33%
+
+      .column-center
+        display: inline-block
+        width: 33%
+        margin-left: 0.5%
+
+      .column-left, .column-right, .column-center
+
+        .product
+          // border: 1px solid black
+          margin-top: 1rem
+
+          p
+            text-align: center
+
+          img
+            width: 95%
+            height: auto
+
+            &:hover
+              opacity: 0.5
+              transition: 700ms
+
+// /////////////////////////////////////////////////////
+/* THIS IS THE TESTIMONIALS SECTION
+/////////////////////////////////////////////////////////
+
+section#testimonials
+  position: relative
+  padding-top: 3rem
+  padding-bottom: 3rem
+  background-color: #5271FF
+  clear: both
+
+  .testimonials-container
+    position: relative
+    display: block
+    width: 85%
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 3rem
+    text-align: center
+
+    .testimonial-title
+      position: relative
+      margin-top: 1rem
+
+    .testimonial-blocks
+      position: relative
+      margin-top: 3rem
+
+      .testimonial
+        margin-bottom: 3.5rem
+        text-align: center
+        p
+          color: $white
+
+        img
+          max-width: 100px
+          height: auto
+          display: block
+          margin-left: auto
+          margin-right: auto
+
+  // Breakpoint for desktop
+  @media screen and (min-width: 640px)
+    padding-top: 5rem
+    padding-bottom: 5rem
+
+    .testimonials-container
+      position: relative
+
+      .testimonial-blocks
+
+        .testimonial
+          position: relative
+
+          img
+            max-width: 200px
+            height: auto

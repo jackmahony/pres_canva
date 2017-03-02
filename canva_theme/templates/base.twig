@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta charset="{{site.charset}}" /><title>{% if wp_title %}{{ wp_title }} - {{ site.name }}{% else %}{{ site.name }}{% endif %}</title><meta content="Design beautiful presentations that will leave your audience in awe. Canva makes it easy to design  your own templates allowing you to customise and tell your story. " name="description" /><meta content="canva, design, presentation, presentations" name="keywords" /><meta content="index, follow" name="robots" /><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><meta content="width=device-width, initial-scale=1.0" name="viewport" /><link rel="pingback" />{{function('wp_head')}}{% block head %}{% endblock %}<link href="{{theme.link}}/assets/stylesheets/core.css" media="screen" rel="stylesheet" type="text/css" /></head><body class="{{body_class}}" data-template="base.twig"></body>{% block header %}<section id="page-header"><div class="header-container"><img src="{{site.theme.link}}/assets/svgs/logo-white.svg" /></div></section>{% endblock %}  {% block content %}    sorry no content  {% endblock %}  {% block footer %}<section id="page-footer"><div class="footer-container"><p>© Canva {{post|date('Y')}}</p></div></section>    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><script></script>
+<script type="text/javascript">
+//<![CDATA[
+
+$( function() {
+
+  $( "#accordion" ).accordion({
+
+    collapsible: true
+
+  });
+
+} );
+
+
+$("#accordion").accordion({ header: "h3", collapsible: true, active: false });
+
+
+//]]>
+</script>
+<script></script>
+<script type="text/javascript">
+//<![CDATA[
+
+jQuery('p:empty').remove();
+
+
+//]]>
+</script>
+  {% endblock %}</html>

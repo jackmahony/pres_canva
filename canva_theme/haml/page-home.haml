@@ -1,0 +1,126 @@
+{% extends "base.twig" %}
+{% block content %}
+
+  -#########################################################
+  /* HERO SECTION
+  -#########################################################
+  %section#hero
+
+    -# Container for Hero section
+    .hero-container
+      .tagline-container
+        %h1 {{post.title}}
+        %p {{post.slogan}}
+        %a{href:"https://www.canva.com/"}
+          .button
+            %span Start Designing
+
+  -#########################################################
+  /* FEATURES SECTION
+  -#########################################################
+  %section#features
+
+    -# Container for Features section
+    .features-container
+      .features-title
+        %h2 Key Features
+      .float-container
+        .features-list
+          {% for item in post.get_field('product_features') |slice(0,3) %}
+            .feature
+              %img{src:"{{TimberImage (item.icon)}}"}
+              %p {{item.feature}}
+          {% endfor %}
+        .features-list-2
+          {% for item in post.get_field('product_features') |slice(3,5) %}
+            .feature
+              %img{src:"{{TimberImage (item.icon)}}"}
+              %p {{item.feature}}
+          {% endfor %}
+
+  -#########################################################
+  /* FAQ's SECTION
+  -#########################################################
+  %section#faqs
+
+    -# Container for FAQ's section
+    .faqs-container
+      %h2.faq FAQ'S
+      %br
+      .faq-single
+        {% for item in post.get_field('faqs') |slice(0,2) %}
+          %h2 {{item.question}}
+          %p {{item.answer}}
+        {% endfor %}
+      #accordion
+        %h3 View More
+        .more
+          {% for item in post.get_field('faqs') |slice(2) %}
+            %h2 {{item.question}}
+            %p {{item.answer}}
+          {% endfor %}
+
+  -#########################################################
+  /* PRODUCT SECTION
+  -#########################################################
+  %section#products
+
+    -# Container for three column layout (PRODUCTS)
+    .product-container
+      .product-title
+            %h2 Take a Look at our templates
+            %p Here are some of our classic designs, merely a sample of what we offer. Behind the scenes our team continues to add to the thousands of custom designs.
+
+      -# Column layout starts here
+      .column-container
+        .column-left
+          .product-1
+            {% for item in post.get_field('templates') |slice(0,3) %}
+              .product
+                %a{href:"https://www.canva.com/"}
+                  %img{src:"{{TimberImage(item.image)|resize(350,225)}}"}
+                %p {{item.title}}
+            {% endfor %}
+
+
+        .column-right
+          .product-2
+            {% for item in post.get_field('templates') |slice(3,3,4) %}
+              .product
+                %a{href:"https://www.canva.com/"}
+                  %img{src:"{{TimberImage(item.image)|resize(350,225)}}"}
+                %p {{item.title}}
+            {% endfor %}
+
+        .column-center
+          .product-3
+            {% for item in post.get_field('templates') |slice(6,9) %}
+              .product
+                %a{href:"https://www.canva.com/"}
+                  %img{src:"{{TimberImage(item.image)|resize(350,225)}}"}
+                %p {{item.title}}
+            {% endfor %}
+
+  -#########################################################
+  /* TESTIMONIALS SECTION
+  -#########################################################
+  %section#testimonials.wow.bounceInUp
+
+    -# Container for testimonials
+    .testimonials-container
+      .testimonial-title
+        %h2.faq Testimonials
+
+      .testimonial-blocks
+        {% for item in post.get_field('testimonials') %}
+          .testimonial
+            %a{href:"{{item.link}}", target:"_blank"}
+              %img{src:"{{TimberImage (item.image)}}"}
+              %p {{item.text}}
+        {% endfor %}
+
+    -# CTA Button
+    %a{href:"https://www.canva.com/"}
+      .button
+        %span Start Designing
+{% endblock %}
